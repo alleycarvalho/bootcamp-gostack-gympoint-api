@@ -39,8 +39,8 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
 
 - [x] Autenticação utilizando **e-mail** e **senha**
 - [x] Autenticação utilizando [JWT: Json Web Token](https://jwt.io/)
+- [x] Validação dos dados de entrada com [YUP](https://github.com/jquense/yup)
 - [ ] Criação de usuário administrador via [seeds do sequelize](https://sequelize.org/master/manual/migrations.html#creating-first-seed)
-- [ ] Validação dos dados de entrada com [YUP](https://github.com/jquense/yup)
 
 ###### Cadastro de alunos (students)
 
