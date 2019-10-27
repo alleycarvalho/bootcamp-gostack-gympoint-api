@@ -17,5 +17,6 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 
 // Authenticated routes
+routes.put('/users', UserController.update);
 
 export default routes;
