@@ -31,7 +31,7 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
 - [x] Aplicação utilizando [Express](https://expressjs.com/pt-br/)
 - [x] Configuração do [Sucrase](https://github.com/alangpierce/sucrase/) + [Nodemon](https://github.com/remy/nodemon/)
 - [x] Configuração do [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) + [EditorConfig](https://editorconfig.org/)
-- [ ] Configuração do [Sequelize](https://github.com/alangpierce/sucrase/) (Utilizando [PostgreSQL](https://www.postgresql.org/))
+- [x] Configuração do [Sequelize](https://github.com/alangpierce/sucrase/) (Utilizando [PostgreSQL](https://www.postgresql.org/))
 
 ### Funcionalidades
 
