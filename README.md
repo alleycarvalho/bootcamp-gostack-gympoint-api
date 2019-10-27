@@ -45,9 +45,9 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
 ###### Cadastro de alunos (students)
 
 - [x] Criação de tabela `students` no banco de dados
-- [ ] Cadastrar/Editar alunos utilizando **nome**, **email**, **idade**, **peso** e **altura**
-- [ ] Somente administradores autenticados podem cadastrar alunos
-- [ ] O aluno não pode se autenticar no sistema
+- [x] Cadastrar/Editar alunos utilizando **nome**, **email**, **idade**, **peso** e **altura**
+- [x] Somente administradores autenticados podem cadastrar alunos
+- [x] O aluno não pode se autenticar no sistema
 
 ## :memo: Licença
 
