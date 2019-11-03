@@ -65,8 +65,8 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
   - **Start**: Plano de **1 mês** por **R\$ 129,00**
   - **Gold**: Plano de **3 meses** por **R\$ 109,00/mês**
   - **Diamond**: Plano de **6 meses** por **R\$ 89,00/mês**
-- [ ] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** planos
-- [ ] Esse recurso é apenas para admnistradores autenticados na aplicação
+- [x] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** planos
+- [x] Esse recurso é apenas para admnistradores autenticados na aplicação
 
 ###### Gestão de matrículas (enrollments)
 
