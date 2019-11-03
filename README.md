@@ -55,13 +55,13 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
 
 ###### Gestão de planos (plans)
 
-- [ ] Criação de tabela `plans` no banco de dados com os campos:
+- [x] Criação de tabela `plans` no banco de dados com os campos:
   - **title** (Nome do plano)
   - **duration** (Duração em número de meses)
   - **price** (Preço mensal do plano)
   - **created_at**
   - **updated_at**
-- [ ] Criação dos planos:
+- [x] Criação dos planos:
   - **Start**: Plano de **1 mês** por **R\$ 129,00**
   - **Gold**: Plano de **3 meses** por **R\$ 109,00/mês**
   - **Diamond**: Plano de **6 meses** por **R\$ 89,00/mês**
