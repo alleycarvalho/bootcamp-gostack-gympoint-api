@@ -113,7 +113,7 @@ O aluno pode criar pedidos de auxílio para a academia em relação a algum exer
 - [x] Criação de rota para **listar** todos os pedidos de auxílio de um aluno com base em seu **ID de cadastro**
 - [x] Criação de rota para **listar** todos os **pedidos de auxílio sem resposta**
 - [x] Criação de rota para a academia **cadastrar** a resposta de um pedido de auxílio
-- [ ] Quando um pedido de auxílio for respondido, o aluno deve receber um **e-mail** da plataforma com a **pergunta** e **resposta** da academia
+- [x] Quando um pedido de auxílio for respondido, o aluno deve receber um **e-mail** da plataforma com a **pergunta** e **resposta** da academia
 
 ## :memo: Licença
 
