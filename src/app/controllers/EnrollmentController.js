@@ -1,12 +1,12 @@
 import * as Yup from 'yup';
-import { isBefore, parseISO, startOfDay, format } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
+import { isBefore, parseISO, startOfDay } from 'date-fns';
 
 import Enrollment from '../models/Enrollment';
 import Plan from '../models/Plan';
 import Student from '../models/Student';
 
-import Mail from '../../lib/Mail';
+import EnrollmentMail from '../jobs/EnrollmentMail';
+import Queue from '../../lib/Queue';
 
 class EnrollmentController {
   async index(req, res) {
@@ -110,21 +110,10 @@ class EnrollmentController {
     const student = await enrollment.getStudent();
     const plan = await enrollment.getPlan();
 
-    await Mail.sendMail({
-      to: `${student.name} <${student.email}>`,
-      subject: 'Nova matrícula!',
-      template: 'enrollment',
-      context: {
-        student: student.name,
-        startDate: format(enrollment.start_date, 'PPPP', {
-          locale: ptBR,
-        }),
-        endDate: format(enrollment.end_date, 'PPPP', {
-          locale: ptBR,
-        }),
-        plan: plan.title,
-        price: enrollment.price,
-      },
+    await Queue.add(EnrollmentMail.key, {
+      enrollment,
+      student,
+      plan,
     });
 
     return res.json(enrollment);
