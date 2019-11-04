@@ -90,13 +90,13 @@ Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo 
 
 ###### Checkins
 
-- [ ] O aluno chega na academia e realiza um **check-in** informando apenas seu **ID de cadastro** (ID do banco de dados)
-- [ ] Criação de tabela `checkins` no banco de dados com os campos:
+- [x] O aluno chega na academia e realiza um **check-in** informando apenas seu **ID de cadastro** (ID do banco de dados)
+- [x] Criação de tabela `checkins` no banco de dados com os campos:
   - **student_id** (Referência ao aluno)
   - **created_at**
   - **updated_at**
-- [ ] O aluno só pode fazer **5 checkins** dentro de um período de **7 dias** corridos.
-- [ ] Criação de rota para **listar** todos os checkins realizados por um usuário com base em seu **ID de cadastro**
+- [x] O aluno só pode fazer **5 checkins** dentro de um período de **7 dias** corridos.
+- [x] Criação de rota para **listar** todos os checkins realizados por um usuário com base em seu **ID de cadastro**
 
 ###### Pedidos de auxílio
 
