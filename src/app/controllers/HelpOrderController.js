@@ -4,6 +4,46 @@ import Student from '../models/Student';
 import HelpOrder from '../models/HelpOrder';
 
 class HelpOrderController {
+  async index(req, res) {
+    const { page = 1 } = req.query;
+
+    const student_id = req.params.studentId;
+
+    const student = await Student.findByPk(student_id);
+
+    if (!student) {
+      return res.status(404).json({
+        error: 'Student not found',
+      });
+    }
+
+    const helpOrders = await HelpOrder.findAll({
+      where: {
+        student_id,
+      },
+      attributes: [
+        'id',
+        'question',
+        'answer',
+        'answer_at',
+        'created_at',
+        'updated_at',
+      ],
+      order: [['updated_at', 'DESC'], ['created_at', 'DESC']],
+      limit: 15,
+      offset: (page - 1) * 15,
+      include: [
+        {
+          model: Student,
+          as: 'student',
+          attributes: ['id', 'name'],
+        },
+      ],
+    });
+
+    return res.json(helpOrders);
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       student_id: Yup.number().required(),
