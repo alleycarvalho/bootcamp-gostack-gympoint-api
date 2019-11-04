@@ -111,7 +111,7 @@ O aluno pode criar pedidos de auxílio para a academia em relação a algum exer
   - **updated_at**
 - [x] Criação de rota para o aluno **cadastrar** pedidos de auxílio informando apenas seu **ID de cadastro** (ID do banco de dados)
 - [x] Criação de rota para **listar** todos os pedidos de auxílio de um aluno com base em seu **ID de cadastro**
-- [ ] Criação de rota para **listar** todos os **pedidos de auxílio sem resposta**
+- [x] Criação de rota para **listar** todos os **pedidos de auxílio sem resposta**
 - [ ] Criação de rota para a academia **cadastrar** a resposta de um pedido de auxílio
 - [ ] Quando um pedido de auxílio for respondido, o aluno deve receber um **e-mail** da plataforma com a **pergunta** e **resposta** da academia
 

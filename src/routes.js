@@ -7,6 +7,7 @@ import PlanController from './app/controllers/PlanController';
 import EnrollmentController from './app/controllers/EnrollmentController';
 import CheckinController from './app/controllers/CheckinController';
 import HelpOrderController from './app/controllers/HelpOrderController';
+import HelpOrderAnswerController from './app/controllers/HelpOrderAnswerController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -44,5 +45,7 @@ routes.get('/enrollments/:id', EnrollmentController.show);
 routes.post('/enrollments', EnrollmentController.store);
 routes.put('/enrollments/:id', EnrollmentController.update);
 routes.delete('/enrollments/:id', EnrollmentController.destroy);
+
+routes.get('/help-orders', HelpOrderAnswerController.index);
 
 export default routes;
