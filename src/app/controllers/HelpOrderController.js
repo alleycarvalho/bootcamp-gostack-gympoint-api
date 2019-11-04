@@ -7,7 +7,7 @@ class HelpOrderController {
   async index(req, res) {
     const { page = 1 } = req.query;
 
-    const student_id = req.params.studentId;
+    const student_id = req.params.id;
 
     const student = await Student.findByPk(student_id);
 
