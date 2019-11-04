@@ -82,7 +82,7 @@ Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo 
   - **updated_at**
 - [x] A **data de início** da matrícula deve ser escolhida pelo usuário
 - [x] A **data de término** e **preço total** da matrícula deve ser calculada com base no plano selecionado
-- [ ] O aluno que **realiza uma matrícula** deve receber um e-mail com **mensagem de boas-vindas** e **detalhes da sua inscrição** na academia, tais como: **plano**, **data de término** e **valor**
+- [x] O aluno que **realiza uma matrícula** deve receber um e-mail com **mensagem de boas-vindas** e **detalhes da sua inscrição** na academia, tais como: **plano**, **data de término** e **valor**
 - [x] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** matrículas
 - [x] Esse recurso é apenas para administradores autenticados na aplicação
 
