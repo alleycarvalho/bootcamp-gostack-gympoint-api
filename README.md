@@ -66,13 +66,13 @@ O **Gympoint** é uma aplicação de gerenciamento de academia.
   - **Gold**: Plano de **3 meses** por **R\$ 109,00/mês**
   - **Diamond**: Plano de **6 meses** por **R\$ 89,00/mês**
 - [x] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** planos
-- [x] Esse recurso é apenas para admnistradores autenticados na aplicação
+- [x] Esse recurso é apenas para administradores autenticados na aplicação
 
 ###### Gestão de matrículas (enrollments)
 
 Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo tem uma matrícula ativa e que pode acessar a academia.
 
-- [ ] Criação de tabela `enrollments` no banco de dados com os campos:
+- [x] Criação de tabela `enrollments` no banco de dados com os campos:
   - **student_id** (Referência ao aluno)
   - **plan_id** (Referência ao plano)
   - **start_date** (Data de início da matrícula)
@@ -80,11 +80,11 @@ Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo 
   - **price** (Preço total calculado na data da matrícula)
   - **created_at**
   - **updated_at**
-- [ ] A **data de início** da matrícula deve ser escolhida pelo usuário
-- [ ] A **data de término** e **preço total** da matrícula deve ser calculada com base no plano selecionado
+- [x] A **data de início** da matrícula deve ser escolhida pelo usuário
+- [x] A **data de término** e **preço total** da matrícula deve ser calculada com base no plano selecionado
 - [ ] O aluno que **realiza uma matrícula** deve receber um e-mail com **mensagem de boas-vindas** e **detalhes da sua inscrição** na academia, tais como: **plano**, **data de término** e **valor**
-- [ ] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** matrículas
-- [ ] Esse recurso é apenas para admnistradores autenticados na aplicação
+- [x] Criação de rotas para **listar**, **cadastrar**, **atualizar** e **remover** matrículas
+- [x] Esse recurso é apenas para administradores autenticados na aplicação
 
 ### Funcionalidades do aluno
 
