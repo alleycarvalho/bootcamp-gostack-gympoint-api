@@ -102,7 +102,7 @@ Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo 
 
 O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer.
 
-- [ ] Criação de tabela `help_orders` no banco de dados com os campos:
+- [x] Criação de tabela `help_orders` no banco de dados com os campos:
   - **student_id** (Referência ao aluno)
   - **question** (Pergunta do aluno em texto)
   - **answer** (Resposta da academia em texto)
