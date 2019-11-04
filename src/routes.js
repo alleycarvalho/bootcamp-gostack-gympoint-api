@@ -47,5 +47,6 @@ routes.put('/enrollments/:id', EnrollmentController.update);
 routes.delete('/enrollments/:id', EnrollmentController.destroy);
 
 routes.get('/help-orders', HelpOrderAnswerController.index);
+routes.post('/help-orders/:id/answers', HelpOrderAnswerController.store);
 
 export default routes;
