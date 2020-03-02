@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import { Op } from 'sequelize';
 import { isBefore, parseISO, startOfDay } from 'date-fns';
 
 import Enrollment from '../models/Enrollment';
@@ -10,18 +11,34 @@ import Queue from '../../lib/Queue';
 
 class EnrollmentController {
   async index(req, res) {
-    const { page = 1 } = req.query;
+    const term = req.query.term || '';
+    const page = parseInt(req.query.page || 1, 10);
+    const perPage = parseInt(req.query.perPage || 5, 10);
 
-    const enrollments = await Enrollment.findAll({
-      attributes: ['id', 'start_date', 'end_date', 'price'],
+    const enrollments = await Enrollment.findAndCountAll({
+      attributes: ['id', 'start_date', 'end_date', 'price', 'active'],
       order: ['start_date'],
-      limit: 15,
-      offset: (page - 1) * 15,
+      where: {
+        [Op.or]: [
+          {
+            '$student.name$': {
+              [Op.iLike]: `%${term}%`,
+            },
+          },
+          {
+            '$plan.title$': {
+              [Op.iLike]: `%${term}%`,
+            },
+          },
+        ],
+      },
+      limit: perPage,
+      offset: (page - 1) * perPage,
       include: [
         {
           model: Student,
           as: 'student',
-          attributes: ['id', 'name', 'age', 'weight', 'height'],
+          attributes: ['id', 'name'],
         },
         {
           model: Plan,
@@ -31,7 +48,15 @@ class EnrollmentController {
       ],
     });
 
-    return res.json(enrollments);
+    const totalPage = Math.ceil(enrollments.count / perPage);
+
+    return res.json({
+      page,
+      perPage,
+      data: enrollments.rows,
+      total: enrollments.count,
+      totalPage,
+    });
   }
 
   async show(req, res) {

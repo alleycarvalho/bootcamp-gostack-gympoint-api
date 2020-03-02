@@ -1,11 +1,33 @@
 import * as Yup from 'yup';
+import { Op } from 'sequelize';
 import Plan from '../models/Plan';
 
 class PlanController {
   async index(req, res) {
-    const plans = await Plan.findAll();
+    const title = req.query.title || '';
+    const page = parseInt(req.query.page || 1, 10);
+    const perPage = parseInt(req.query.perPage || 5, 10);
 
-    return res.json(plans);
+    const plans = await Plan.findAndCountAll({
+      order: ['title'],
+      where: {
+        title: {
+          [Op.like]: `%${title}%`,
+        },
+      },
+      limit: perPage,
+      offset: (page - 1) * perPage,
+    });
+
+    const totalPage = Math.ceil(plans.count / perPage);
+
+    return res.json({
+      page,
+      perPage,
+      data: plans.rows,
+      total: plans.count,
+      totalPage,
+    });
   }
 
   async show(req, res) {
